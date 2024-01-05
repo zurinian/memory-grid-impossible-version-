@@ -1,0 +1,137 @@
+@font-face {
+    font-family: helloNight;
+    src: url(hello-night-font/HelloNight-rg7vO.otf);
+}
+@keyframes scrolling {
+    0% {left: 0;}
+    50% {left: 50vw;}
+    100%{left: 100vw;}
+}
+
+$pink : #FF1178;
+$red : #FE0000;
+$yellow : #FFF205;
+$blue : #01FFF4;
+$green : #7CFF01;
+$black : #1a1a1a;
+$purple : #BC13FE;
+
+html {
+    background-color: $black;
+    * {
+        margin: 0;
+        padding: 0;
+    }
+    h1 {
+        font-family: helloNight;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 20vh;
+        color: $pink;
+        text-shadow: 0 0 10px $pink;
+        font-size: 64px;
+    }
+    diff {
+        height: 5vh;
+        display: flex;
+        justify-content: center;
+        change {
+
+            background-color: $green;
+            border-radius: 20px;
+            height: 100%;
+            width: 15vh;
+            font-size: 32px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            user-select: none;
+            transition: width 0.3s, box-shadow 0.3s;
+            &:hover {
+                background-color: $blue;
+                color: $pink;
+                box-shadow: 0 0 50px $green;
+                width: 100vw;
+                background-color: $green;
+                border-radius: 0;
+            }
+        }
+    }
+    div {
+        transition: transform 0.5s;
+        margin-top: 5vh;
+        height: 70vh;
+        display: grid;
+        gap: 5px;
+        width: 70vh;
+        .grid {
+            color: $black;
+            background-color: $purple;
+            border: 5px purple solid;
+            border-radius: 10px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 32px;
+            font-family: helloNight;
+            transition: transform 0.3s, box-shadow 0.3s;
+            user-select: none;
+            &:hover {
+                transform: translate(0, 5px);
+                box-shadow: 0 0 30px $purple;
+            }
+        }
+        .yes {
+            background-color: black;
+            color: $purple;
+        }
+    }
+}
+.correct {
+    transform: translate(0, -5px);
+    background-color: $green !important;
+    border: 5px green solid !important;
+}
+.wrong {
+    transform: translate(0, -5px);
+    background-color: $red !important;
+    border: 5px red solid !important;
+}
+body {
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.blur {
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    background-color: black;
+    opacity: 0.3;
+}
+.losewin {
+    position: fixed;
+    background-color: $green;
+    width: 100vw;
+    height: 10vh;
+    transition: height 0.5s;
+    box-shadow: 0 5vh 0 green;
+}
+.text {
+    position: absolute;
+    font-family: helloNight;
+    font-size: 64px;
+    color: $pink;
+    animation: scrolling 3s ease-in-out;
+    left: 100vw;
+    white-space: nowrap;
+}
+img {
+    position: fixed;
+    height: 0px;
+    width: 0px;
+}
+

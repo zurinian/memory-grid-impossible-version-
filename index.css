@@ -1,0 +1,143 @@
+@font-face {
+  font-family: helloNight;
+  src: url(hello-night-font/HelloNight-rg7vO.otf);
+}
+@keyframes scrolling {
+  0% {
+    left: 0;
+  }
+  50% {
+    left: 50vw;
+  }
+  100% {
+    left: 100vw;
+  }
+}
+html {
+  background-color: #1a1a1a;
+}
+html * {
+  margin: 0;
+  padding: 0;
+}
+html h1 {
+  font-family: helloNight;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 20vh;
+  color: #FF1178;
+  text-shadow: 0 0 10px #FF1178;
+  font-size: 64px;
+}
+html diff {
+  height: 5vh;
+  display: flex;
+  justify-content: center;
+}
+html diff change {
+  background-color: #7CFF01;
+  border-radius: 20px;
+  height: 100%;
+  width: 15vh;
+  font-size: 32px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+  transition: width 0.3s, box-shadow 0.3s;
+}
+html diff change:hover {
+  background-color: #01FFF4;
+  color: #FF1178;
+  box-shadow: 0 0 50px #7CFF01;
+  width: 100vw;
+  background-color: #7CFF01;
+  border-radius: 0;
+}
+html div {
+  transition: transform 0.5s;
+  margin-top: 5vh;
+  height: 70vh;
+  display: grid;
+  gap: 5px;
+  width: 70vh;
+}
+html div .grid {
+  color: #1a1a1a;
+  background-color: #BC13FE;
+  border: 5px purple solid;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 32px;
+  font-family: helloNight;
+  transition: transform 0.3s, box-shadow 0.3s;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+}
+html div .grid:hover {
+  transform: translate(0, 5px);
+  box-shadow: 0 0 30px #BC13FE;
+}
+html div .yes {
+  background-color: black;
+  color: #BC13FE;
+}
+
+.correct {
+  transform: translate(0, -5px);
+  background-color: #7CFF01 !important;
+  border: 5px green solid !important;
+}
+
+.wrong {
+  transform: translate(0, -5px);
+  background-color: #FE0000 !important;
+  border: 5px red solid !important;
+}
+
+body {
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.blur {
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  background-color: black;
+  opacity: 0.3;
+}
+
+.losewin {
+  position: fixed;
+  background-color: #7CFF01;
+  width: 100vw;
+  height: 10vh;
+  transition: height 0.5s;
+  box-shadow: 0 5vh 0 green;
+}
+
+.text {
+  position: absolute;
+  font-family: helloNight;
+  font-size: 64px;
+  color: #FF1178;
+  animation: scrolling 3s ease-in-out;
+  left: 100vw;
+  white-space: nowrap;
+}
+
+img {
+  position: fixed;
+  height: 0px;
+  width: 0px;
+}/*# sourceMappingURL=index.css.map */
